@@ -8,6 +8,8 @@ import connectedDB from "./src/db/mongodbURL.js";
 
 const app = express();
 
+app.set("trust proxy", 1);
+
 app.use(
   cors({
     origin: process.env.FRONTEND_URL,
@@ -21,6 +23,7 @@ app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 app.use(cookieParser());
 
 app.use("/api/v1/users", router);
+
 const PORT = process.env.PORT || 8080;
 
 connectedDB();
