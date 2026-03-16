@@ -1,4 +1,4 @@
-const backendDomain = "http://localhost:8081";
+const backendDomain = "https://blog-project-cd89.onrender.com";
 
 export const AllSummary_API = {
   signup: {
